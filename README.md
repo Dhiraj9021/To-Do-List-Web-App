@@ -20,7 +20,7 @@ A lightweight, offline-capable, and responsive To-Do List web application. It us
 
 ## 📸 Demo
 
-![todo-demo](https://via.placeholder.com/800x400?text=To-Do+App+Screenshot)
+![todo-demo](https://github.com/Dhiraj9021/To-Do-List-Web-App/blob/main/Screenshot%202025-07-09%20220400.png)
 
 
 ---
