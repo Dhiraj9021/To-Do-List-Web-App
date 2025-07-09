@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-section button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-section button:hover {
+  background-color: #0056b3;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #ddd;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  align-items: center;
+  white-space: pre-wrap;
+}
+
+li span {
+  cursor: pointer;
+}
+
+li.completed span {
+  color: #777;
+}
+
+li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Add a checkbox icon before task text */
+.task-text::before {
+  content: "☐"; /* Empty checkbox for pending */
+  margin-right: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* If task is completed, show checkmark */
+.completed .task-text::before {
+  content: "✅"; /* Tick mark for completed */
+}
+
+/* Add strikethrough for completed text */
+.completed .task-text {
+  text-decoration: line-through;
+  color: #777;
+}
